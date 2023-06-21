@@ -2,7 +2,6 @@ from django.db import models
 
 from vet.models import Client
 
-
 class Reservation(models.Model): 
     client=models.ForeignKey(Client,on_delete=models.CASCADE)
     date_de_prise=models.DateTimeField()

@@ -1,5 +1,4 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
-# Create your views here.
 def index(request):
-    return HttpResponse("Miarahaba an'ilay tafiditra"+str(request))
+    return render(request, 'templates/index.html')

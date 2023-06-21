@@ -77,6 +77,7 @@ python manage.py startapp <nom de l'application>
 #### Pour tout le monde
 - Vérifier que vous êtes bien sur votre branche de travail
 - Vérifier que vous avez bien `pull` la dernière version de la branche principale (afin d'éviter les conflits,
+    return JsonResponse({'message': 'Rendez-vous supprimé avec succès.'})
 cela permet de mettre à jour votre branche avec la dernière version de la branche principale et voir si votre code est
 compatible)
 ```
