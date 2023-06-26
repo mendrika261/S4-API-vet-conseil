@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Liste des clients</h1>
+    <ul>
+    {% for client in clients %}
+        <li>{{ client.nom }} - {{ client.prenom}}</li>
+        <a href="{% url 'update_client' client.id %}">Modifier</a>
+        <a href="{% url 'delet_client' client.id %}">supprimer</a>
+    {% endfor %}
+    </ul>
+</body>
+</html> 

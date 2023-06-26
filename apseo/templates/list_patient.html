@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Liste des patients</h1>
+    <ul>
+    {% for patient in patients %}
+        <li> {{ patient.age}} - {{ patient.proprietaire.nom}} - {{ patient.proprietaire.prenom}}</li>
+        {% comment %} <a href="{% url 'update_patient' patient.id %}">Modifier</a> {% endcomment %}
+        <a href="{% url 'delet_patient' patient.id %}">supprimer</a>
+    {% endfor %}
+    </ul>
+</body>
+</html> 

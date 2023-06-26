@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="{% url 'save_client' %}" >
+        {% csrf_token %}    
+        <input type="text" name="nom">
+        <input type="text" name="prenom">
+        <input type="text" name="adresse">
+        <input type="email" name="mail">
+        <input type="text" name="contact">
+        <input type="submit" value="Vote">
+        <h1 style="color: red">{{ saved }}</h1>
+    </form>
+</body>
+</html>
