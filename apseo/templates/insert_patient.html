@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="{% url 'save_client' %}" >
+        {% csrf_token %}    
+        <input type="number" name="age">
+        <select name="proprietaire" style="width : 200px">
+            {% for client in clients %}
+              <option value="{{ client.0 }}">{{ client.1 }} - {{ client.2 }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Vote">
+    </form>
+</body>
+</html>
